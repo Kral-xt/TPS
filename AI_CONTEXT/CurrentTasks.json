@@ -1,0 +1,86 @@
+{
+  "current_task": "制作玩家背包 UI 系统",
+  "status": "completed",
+  "target_module": "InventorySystem",
+  "scope": [
+    "B 键单实例打开 BagDialog，ESC 与 QuitBtn 播放 Bag@Hide 后关闭并恢复 Gameplay 输入",
+    "通过 InventoryDisplayService 与 IItemConfigProvider 读取 ItemID/Count 对应的图标、品质色和标签",
+    "复用 Content 内置 ItemCell 模板动态生成列表，支持 All/Equipment/Usable/Material/Fragment/Other 筛选",
+    "BagSpaceNum 统计不同物品种类，库存变化通知与公开 RefreshBag 接口均可触发刷新",
+    "GameUIPrefabRegistry 已注册 BagDialog；未修改 Prefab 层级、Designer、场景、TagManager、Layer 或第三方插件"
+  ],
+  "current_observation": "Unity Roslyn 编译与 9 个目标脚本诊断通过，Console 无背包错误。Play Mode 使用真实原始按键验证 B 打开、Bag@Show、空背包种类数 0、ESC 动画关闭及 QuitBtn 动画关闭。正式 persistentDataPath 存档为空且未被测试修改，因此非空 ItemCell 图标、数量、品质色及分类仅完成静态代码路径验证。",
+  "last_verified": "2026-08-02",
+  "latest_extension": {
+    "task": "Inventory list entries and GM debug view",
+    "status": "completed",
+    "scope": [
+      "B toggles BagDialog with Bag@Show and Bag@Hide re-entry guards",
+      "G and Escape toggle the registered GMView panel",
+      "GM AddCell appends ItemData and saves through PlayerInventoryController",
+      "List<ItemData> preserves duplicate IDs and insertion order for one-cell-per-entry display"
+    ],
+    "verification": [
+      "Unity script diagnostics: 0 errors and 0 warnings",
+      "Play Mode: Bag and GM single-instance open/close passed; Console clean",
+      "Three duplicate ID 1 entries generated x10, x20 and x5 cells with BagSpaceNum 3",
+      "Temporary persistence slot restored three duplicate entries in insertion order and was cleaned"
+    ],
+    "known_config_ids": "Current ItemConfig assets use IDs 1-7; ID 1001 is not configured yet"
+  },
+  "latest_bag_dialog_fix": {
+    "task": "修复 BagDialog 运行时布局并按数量拆分显示格子",
+    "status": "completed",
+    "changes": [
+      "BagDialogController 将 Prefab 根 RectTransform 布局传入运行时面板",
+      "BagDialog 在 UIKit 打开后恢复 Prefab 的锚点、轴心、位置、尺寸和缩放",
+      "显示层按 ItemData.Count 生成独立 ItemCell，并隐藏 ItemCount 节点",
+      "库存结构、存档、GM、Prefab 层级和 Bag@Show/Bag@Hide 动画均未修改"
+    ],
+    "verification": [
+      "Unity 脚本诊断与 Console：0 errors，0 warnings",
+      "运行时 RectTransform：offsetMin=(150,150)，offsetMax=(-150,-150)，sizeDelta=(-300,-300)",
+      "内存临时添加 ID 1 Count 12 后格子总数增加 12，全部数量节点隐藏，测试后恢复原模型",
+      "重复打开保持单实例；QuitBtn 进入 Bag@Hide，动画后关闭并恢复 Gameplay"
+    ],
+    "last_verified": "2026-08-03"
+  },
+  "latest_bag_virtualization": {
+    "task": "背包道具列表虚拟化与对象池优化",
+    "status": "completed",
+    "changes": [
+      "BagCategoryCache 预建 All/Equipment/Material/Fragment/Other/Usable 分类索引",
+      "BagItemLoader 根据 ScrollRect 可视区域和缓存行计算数据窗口并手动定位 Cell",
+      "ItemCellPool 跨滚动、分类和 BagDialog 重开复用对象，每帧最多实例化 20 个",
+      "ItemCellController 使用统一 Refresh/Clear 入口，保持同 ID 按数量拆分"
+    ],
+    "verification": [
+      "2025 条显示数据仅创建 90 个 Cell；首帧创建 20 个，后台补为活动 60 + 缓存 30",
+      "滚动到底部切换到索引 1960，TotalCreated 保持 90，顶部 60 个实例全部复用",
+      "材料 12 条与全部 2025 条互切时 TotalCreated 保持 90",
+      "关闭后活动 0 + 缓存 90，重新打开仍不新增对象；Show/Hide、150 边距和输入恢复通过",
+      "测试库存从临时总量 2025 精确恢复为原始 4 条记录、总量 1025，未保存临时数据"
+    ],
+    "last_verified": "2026-08-03"
+  },
+  "latest_item_detail": {
+    "task": "背包物品详情弹窗 ItemDetail",
+    "status": "completed",
+    "changes": [
+      "ItemConfig 新增 Description，并通过 InventoryItemConfigData 和 InventoryDisplayItem 传入 UI",
+      "ItemDetailController 管理唯一详情、外部点击、旧详情 Hide 后切换新详情及 Cell 回收",
+      "ItemDetailView 显示品质色、Icon、Name、多类型和 Description",
+      "ItemCell Btn 拉伸覆盖完整 Cell；复用现有详情层级和动画资源，未修改 Prefab 层级",
+      "Animator 状态规范为 ItemDetail@Show 和 ItemDetail@hide，动画 Clip 关闭循环"
+    ],
+    "verification": [
+      "运行时只有 1 个活动详情，显示名称、Equipment / Material / Usable 和描述文本正确",
+      "点击其他 Cell 时旧详情先播放 Hide，之后新详情显示，未出现双弹窗",
+      "外部点击播放 Hide 后活动详情归零",
+      "滚动复用到数据索引 960 时详情自动关闭，ItemCell TotalCreated 保持 90",
+      "背包关闭时详情清理，Bag@Hide、活动 0 + 缓存 90 和 Gameplay 恢复通过",
+      "ItemConfig 名称与 Description 到 InventoryDisplayItem 的数据链验证通过"
+    ],
+    "last_verified": "2026-08-03"
+  }
+}

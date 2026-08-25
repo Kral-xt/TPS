@@ -1,0 +1,190 @@
+{
+  "layer_rules": {
+    "Presentation": [
+      "Application",
+      "Domain contracts"
+    ],
+    "Application": [
+      "Domain",
+      "Application abstractions"
+    ],
+    "Domain": [],
+    "Infrastructure": [
+      "Application abstractions",
+      "Domain contracts"
+    ]
+  },
+  "modules": {
+    "PlayerSystem": {
+      "paths": [
+        "Assets/_Game/Presentation/Player",
+        "Assets/_Game/Application/Player",
+        "Assets/_Game/Domain/Player",
+        "Assets/_Game/Config/Player"
+      ],
+      "depends_on": [
+        "CombatSystem",
+        "BulletTimeSystem",
+        "AudioSystem",
+        "PoolSystem",
+        "ConfigSystem"
+      ]
+    },
+    "WeaponSystem": {
+      "paths": [
+        "Assets/_Game/Presentation/Weapon",
+        "Assets/_Game/Application/Weapon",
+        "Assets/_Game/Config/Weapon"
+      ],
+      "depends_on": [
+        "PlayerSystem",
+        "AudioSystem",
+        "CombatSystem",
+        "PoolSystem",
+        "VfxSystem",
+        "ConfigSystem"
+      ]
+    },
+    "EnemySystem": {
+      "paths": [
+        "Assets/_Game/Presentation/Enemy",
+        "Assets/_Game/Domain/Enemy",
+        "Assets/_Game/Config/Enemy"
+      ],
+      "depends_on": [
+        "CombatSystem",
+        "AudioSystem",
+        "PoolSystem",
+        "ConfigSystem"
+      ]
+    },
+    "BulletTimeSystem": {
+      "paths": [
+        "Assets/_Game/Presentation/BulletTime",
+        "Assets/_Game/Application/BulletTime",
+        "Assets/_Game/Domain/BulletTime",
+        "Assets/_Game/Config/BulletTime"
+      ],
+      "depends_on": [
+        "PlayerSystem",
+        "AudioSystem",
+        "CombatSystem",
+        "ConfigSystem"
+      ]
+    },
+    "CameraSystem": {
+      "paths": [
+        "Assets/_Game/Presentation/Camera",
+        "Assets/_Game/Domain/Camera",
+        "Assets/_Game/Config/Camera"
+      ],
+      "depends_on": [
+        "PlayerSystem",
+        "ConfigSystem"
+      ]
+    },
+    "CombatSystem": {
+      "paths": [
+        "Assets/_Game/Presentation/Combat",
+        "Assets/_Game/Application/Combat",
+        "Assets/_Game/Domain/Combat"
+      ],
+      "depends_on": []
+    },
+    "PoolSystem": {
+      "paths": [
+        "Assets/_Game/Infrastructure/Pool"
+      ],
+      "depends_on": [
+        "Application abstractions"
+      ]
+    },
+    "VfxSystem": {
+      "paths": [
+        "Assets/_Game/Presentation/VFX"
+      ],
+      "depends_on": [
+        "PoolSystem"
+      ]
+    },
+    "UISystem": {
+      "paths": [
+        "Assets/_Game/Presentation/UI",
+        "Assets/XGame/Runtime/UI/Views/Battle/Views/BattleView.cs"
+      ],
+      "depends_on": [
+        "PlayerSystem",
+        "AudioSystem",
+        "BulletTimeSystem"
+      ]
+    },
+    "StartupSystem": {
+      "paths": [
+        "Assets/_Game/Application/Startup",
+        "Assets/_Game/Infrastructure/SceneLoading",
+        "Assets/_Game/Infrastructure/UI",
+        "Assets/_Game/Presentation/UI/GameStartupPresenter.cs",
+        "Assets/XGame/Runtime/UI/Views/Menu/Views/StartGameView.cs",
+        "Assets/XGame/Runtime/UI/Views/Load/Views/LoadingView.cs"
+      ],
+      "depends_on": [
+        "Application abstractions",
+        "AudioSystem",
+        "UISystem"
+      ]
+    },
+    "AudioSystem": {
+      "paths": [
+        "Assets/_Game/Config/Audio",
+        "Assets/_Game/Infrastructure/Audio"
+      ],
+      "depends_on": [
+        "Application abstractions",
+        "ConfigSystem"
+      ]
+    },
+    "ItemSystem": {
+      "paths": [
+        "Assets/_Game/Config/Item",
+        "Assets/_Game/Infrastructure/Config/Item",
+        "Assets/Resources/Config/Item"
+      ],
+      "depends_on": [
+        "ConfigSystem"
+      ]
+    },
+    "InventorySystem": {
+      "paths": [
+        "Assets/_Game/Domain/Inventory",
+        "Assets/_Game/Application/Inventory",
+        "Assets/_Game/Application/Abstractions/IInventoryStore.cs",
+        "Assets/_Game/Application/Abstractions/IItemConfigProvider.cs",
+        "Assets/_Game/Infrastructure/Persistence/Inventory",
+        "Assets/_Game/Presentation/Inventory",
+        "Assets/XGame/Runtime/UI/Views/Bag/Dialogs/BagDialog.cs",
+        "Assets/XGameAssets/Modules/Bag",
+        "Assets/Scripts/UI/GMView.cs",
+        "Assets/Art/UIPrefab/GMView.prefab"
+      ],
+      "depends_on": [
+        "Application abstractions",
+        "ItemSystem",
+        "PlayerSystem",
+        "StartupSystem"
+      ]
+    },
+    "ConfigSystem": {
+      "paths": [
+        "Assets/_Game/Config",
+        "Assets/_Game/Infrastructure/Config"
+      ],
+      "depends_on": []
+    }
+  },
+  "notes": [
+    "Resources 目录不包含业务 C# 脚本。",
+    "脚本目录按架构层优先组织，现有命名空间暂时保持不变。",
+    "默认配置脚本与配置实例位于 Assets/_Game/Config，运行时通过 GameConfigManager 或已有 Prefab 序列化引用访问。",
+    "ItemSystem 为数据表式配置例外：脚本仍位于 Assets/_Game，基础配置资产位于 Assets/Resources/Config/Item 并由独立管理器加载。"
+  ]
+}
