@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94ad274c127d46469598bc854b04dd8b, type: 3}
+  m_Name: GameUIPrefabRegistry
+  m_EditorClassIdentifier: Assembly-CSharp::TPS.Startup.Infrastructure.GameUIPrefabRegistry
+  startGameView: {fileID: 4017842523384363977, guid: 6ff7eb920adc94f4e8ff04717729f963, type: 3}
+  loadingView: {fileID: 7264175176556487691, guid: 938395e2244b809498eac383067a6715, type: 3}
+  battleView: {fileID: 1242027609730012279, guid: c1cdbc03e3e902946991ec296c94b04f, type: 3}
+  bagDialog: {fileID: 2447974631301620453, guid: 711257d5bd815984cbf81aa90256f5ea, type: 3}
+  gmView: {fileID: 5422976956418415697, guid: dc7d27ef62e029a40b521ab8dcc4eb4d, type: 3}
+  itemCell: {fileID: 2908759441768112701, guid: 4688cc39441096f40b0cc17961fcfa48, type: 3}

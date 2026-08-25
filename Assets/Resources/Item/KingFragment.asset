@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e13f573e1014e1c8520ec8b0ddb641d, type: 3}
+  m_Name: KingFragment
+  m_EditorClassIdentifier: 
+  itemID: 7
+  itemIcon: {fileID: 21300000, guid: 4156a0fcb5a3a49cb9e3639da32288d6, type: 3}
+  itemName: KingFragment
+  description: King's Fragment, Collect 50 Fragments To Synthesize The King
+  quality: 5
+  itemTypes: 02000000
