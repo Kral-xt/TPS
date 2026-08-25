@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08e28fac465ddbc44953d11e73b2f3a8, type: 3}
+  m_Name: 1001
+  m_EditorClassIdentifier: 
+  weaponName: 98K
+  weaponType: Gun
+  weaponLevel: 1
+  weaponPrefab: {fileID: 919132149155446097, guid: 1f91096f4d9ef6040abfdb3e6c2ef615, type: 3}
+  weaponHitVFX: {fileID: 5670498641291097878, guid: 70fac01c33aee9442a87d85d6f3d21e5, type: 3}
+  damage: 10
+  attackSpeed: 1.5
+  attackRange: 100
+  projectileVisualSpeed: 200
+  aimAssistStrength: 0.5
+  aimAssistMaxDistance: 30
+  aimAssistScreenRadius: 120
+  aimAssistMaxAngle: 8
+  aimAssistTargetHoldTime: 0.15
+  aimAssistTargetMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  aimAssistObstacleMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  showAimAssistDebug: 0
+  reloadTime: 0.15
+  ammoCapacity: 10
+  killAmmoBack: 1
+  ammunitionSupply: 5

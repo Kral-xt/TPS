@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eeeb67624c303924faafd617c7d29060, type: 3}
+  m_Name: PlayerConfig
+  m_EditorClassIdentifier: 
+  MaxHp: 100
+  InitialLevel: 1
+  InitialRequiredExp: 100
+  ExpGrowthRate: 1.1
+  CriticalRate: 0.647
+  CriticalDamage: 0.6
+  MoveSpeed: 7
+  SprintSpeed: 12
+  Acceleration: 18
+  Deceleration: 22
+  RotationSpeed: 18
+  SprintTurnControl: 0.65
+  JumpHeight: 2
+  EnableDoubleJump: 1
+  MaxAirJumpCount: 1
+  DoubleJumpHeight: 1.8
+  Gravity: -16
+  GroundedStickForce: -2
+  AirborneDistanceMultiplier: 1
+  AirborneEnterDelay: 0.08
+  AirborneExitDistanceMultiplier: 0.8
+  GroundProbeRadius: 0
+  GroundLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  CoyoteTime: 0.12
+  WalkLayer: 1
+  SprintLayer: 2
+  AnimationDampTime: 0.08
+  LayerBlendSpeed: 8
+  JumpParameterHoldTime: 0.08
+  CrouchKey: 99
+  CrouchHeight: 1
+  CrouchCenterY: 0.5
+  CrouchMoveSpeedMultiplier: 0.5
+  CrouchTransitionSpeed: 15
+  StandUpCheckRadius: 0.5
+  CrouchLayer: 3
+  SlideSpeedThreshold: 7
+  SlideDeceleration: 8
+  SlideEndSpeed: 1
+  SlideMinimumSpeed: 9.5
+  SlideLayer: 4
+  SlideInitialBoostMultiplier: 1.2
+  StandUpBlockMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  DebugStandUpChecks: 0
+  ClimbObstacleMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  ClimbCheckDistance: 1
+  ClimbMaxHeightMultiplier: 1.5
+  ClimbProbeRadius: 0.3
+  ClimbForwardOffset: 0.45
+  ClimbDuration: 1.1
+  ClimbTag: Climbable
+  DebugClimbChecks: 0
+  EnableVault: 1
+  VaultCheckDistance: 1.2
+  VaultMaxHeightRatio: 0.5
+  VaultMaxWidthMultiplier: 3.5
+  VaultDuration: 0.25
+  VaultForwardOffset: 0.75
+  VaultHeightOffset: 0.05
+  VaultLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  VaultRequireGrounded: 1
+  EnableFrontFlipVault: 1
+  FrontFlipMaxObstacleHeight: 1.8
+  FrontFlipMaxObstacleWidth: 3
+  FrontFlipCheckDistance: 1.5
+  FrontFlipTriggerRadius: 0.8
+  FrontFlipDuration: 0.4
+  FrontFlipForwardOffset: 0.6
+  FrontFlipHeightOffset: 0.8
+  FrontFlipLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  EnableWallRun: 1
+  WallTag: Wall
+  WallCheckDistance: 0.8
+  WallCheckRadius: 0.35
+  WallLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  MinWallRunSpeed: 4
+  MaxWallRunSpeed: 12
+  MinWallRunDuration: 0.35
+  MaxWallRunDuration: 1.25
+  MinWallSlideSpeed: 0.15
+  MaxWallSlideSpeed: 2.2
+  WallRunSpeedMultiplier: 1
+  WallRunStickForce: 3
+  WallJumpHorizontalForce: 8
+  WallJumpVerticalForce: 8
+  WallRunExitCooldown: 0.25
+  RequireForwardInputForWallRun: 1
+  WallRunInitialRiseSpeed: 2.2
+  WallRunRiseDuration: 0.18
+  DodgeDistance: 2.5
+  DodgeDuration: 0.15
+  DodgeCooldown: 0.75
+  DodgeInvincibleDuration: 0.18
+  DodgeStaminaCost: 0
+  DodgeCollisionSkin: 0.05
+  DodgeCollisionMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  DodgeTriggerRange: 2.5
+  PerfectDodgeWindow: 0.35
+  PerfectDodgeRangeMultiplier: 1.5
+  PerfectDodgeAngleTolerance: 30
+  PerfectDodgeBulletTimeEnergy: 50
+  AfterimageSpawnInterval: 0.03
+  AfterimageLifetime: 0.2
+  AfterimageStartAlpha: 0.6
+  AfterimageColor: {r: 0.1, g: 0.55, b: 1, a: 1}
+  AfterimageInitialCapacity: 12
+  AfterimageMaxCapacity: 32
+  AfterimageScaleDiagnostics: 1
+  BulletTimeAfterimageInterval: 0.08
+  BulletTimeAfterimageLifetime: 0.35
+  BulletTimeAfterimageMinMoveDistance: 0.03
+  BulletTimeAfterimageMinRotationAngle: 2

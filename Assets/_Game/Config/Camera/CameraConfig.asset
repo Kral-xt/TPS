@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8c7939b13bd1ab4ab334dab970ba594, type: 3}
+  m_Name: CameraConfig
+  m_EditorClassIdentifier: 
+  TargetOffset: {x: 0, y: 1.55, z: 0}
+  FollowDistance: 5
+  FollowHeight: 0.25
+  FollowSmoothTime: 0.045
+  MouseSensitivityX: 2.8
+  MouseSensitivityY: 2.2
+  MinPitch: -35
+  MaxPitch: 65
+  LockCursorOnStart: 1
+  CollisionMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  CollisionRadius: 0.25
+  CollisionPadding: 0.08
+  NormalFov: 60
+  SprintFov: 68
+  FovLerpSpeed: 8
+  AimFov: 42

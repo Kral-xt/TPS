@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7229f14f74748e8458e2c5f9b2861391, type: 3}
+  m_Name: Zombie_Default
+  m_EditorClassIdentifier: 
+  targetTag: Player
+  maxHP: 11
+  experienceValue: 30
+  moveSpeed: 3
+  rotationSpeed: 8
+  searchRadius: 20
+  attackRange: 1.6
+  attackDamage: 10
+  attackCooldown: 5
+  attackEventHitTolerance: 0.8
+  attackActiveWindow: 0.35
+  headShotBonusCriticalChance: 0.5
+  attackPrepareTime: 0.6667
+  attackWarningPrefab: {fileID: 8244054569884584542, guid: 925786e949b15924381fd5617219e7f3, type: 3}
+  attackWarningHeadOffset: {x: 0, y: 0.25, z: 0}
+  attackWarningWorldScale: 0.005
+  attackWarningInitialCapacity: 5
+  attackWarningMaxCapacity: 30
+  attackFacingDot: 0.1
+  pathRefreshInterval: 0.25
+  repathTargetMoveDistance: 0.75

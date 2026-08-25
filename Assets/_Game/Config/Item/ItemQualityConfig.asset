@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97431da1e6024c38a073a3f278bd76c9, type: 3}
+  m_Name: ItemQualityConfig
+  m_EditorClassIdentifier: 
+  qualityColors:
+  - quality: 1
+    displayName: Orange
+    color: {r: 1, g: 0.5, b: 0, a: 1}
+  - quality: 2
+    displayName: Purple
+    color: {r: 0.6, g: 0.2, b: 0.8, a: 1}
+  - quality: 3
+    displayName: Blue
+    color: {r: 0, g: 0.45, b: 1, a: 1}
+  - quality: 4
+    displayName: Green
+    color: {r: 0.2, g: 0.8, b: 0.25, a: 1}
+  - quality: 5
+    displayName: White
+    color: {r: 1, g: 1, b: 1, a: 1}
+  fallbackDisplayName: Unknown
+  fallbackColor: {r: 1, g: 1, b: 1, a: 1}

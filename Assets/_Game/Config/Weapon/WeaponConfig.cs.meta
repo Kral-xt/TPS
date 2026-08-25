@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 08e28fac465ddbc44953d11e73b2f3a8
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - BulletHitVFXPrefab: {fileID: 939184039953487501, guid: 9365041cb047b47ae85d566d0881926f, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

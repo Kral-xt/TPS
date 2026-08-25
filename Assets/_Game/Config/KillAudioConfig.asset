@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae86469cdc91c4642931c981ae6a0bb7, type: 3}
+  m_Name: KillAudioConfig
+  m_EditorClassIdentifier: 
+  killClips:
+  - {fileID: 8300000, guid: fe0dd3e07d5ecbf4983b4120c9a79a32, type: 3}
+  - {fileID: 8300000, guid: 14c4c680d37d9234497684e687488e93, type: 3}
+  - {fileID: 8300000, guid: add7b53fc3f060743b0f30f2cac6435b, type: 3}
+  - {fileID: 8300000, guid: 58dcffdb666c076458173e61e2235bd8, type: 3}
+  - {fileID: 8300000, guid: 1e1b260345d8df9488481045fb383909, type: 3}
+  - {fileID: 8300000, guid: d019c07b6180edc4da26cbaf2b1fa4eb, type: 3}
+  - {fileID: 8300000, guid: 76cb3eaf43475ae4abb2c05f9f8fcbda, type: 3}
+  - {fileID: 8300000, guid: 7ecde538afbc1b6488887537404d70f9, type: 3}
+  headShotClip: {fileID: 8300000, guid: 87204b979ec4492409c4345fd67e2d4e, type: 3}

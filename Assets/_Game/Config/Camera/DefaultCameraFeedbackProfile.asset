@@ -1,0 +1,318 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17c61d19ada22f7469b6299f66bbb59a, type: 3}
+  m_Name: DefaultCameraFeedbackProfile
+  m_EditorClassIdentifier: 
+  shoot:
+    impulse:
+      enabled: 1
+      positionAmplitude: {x: 0.018, y: 0.012, z: 0.01}
+      rotationAmplitude: {x: 0.45, y: 0.2, z: 0.12}
+      frequency: 32
+      duration: 0.12
+      strength: 0.45
+    fov:
+      enabled: 1
+      offset: 1.5
+      envelope:
+        attack: 0.02
+        hold: 0.02
+        recovery: 0.14
+    recoil:
+      enabled: 1
+      pitch: 1.4
+      yawRange: {x: -0.28, y: 0.28}
+      envelope:
+        attack: 0.015
+        hold: 0.01
+        recovery: 0.16
+    offset:
+      enabled: 1
+      localOffset: {x: 0, y: 0, z: -0.06}
+      envelope:
+        attack: 0.02
+        hold: 0.02
+        recovery: 0.14
+    damping:
+      enabled: 0
+      multiplier: 0
+      envelope:
+        attack: 0
+        hold: 0
+        recovery: 0
+    timeScale:
+      enabled: 0
+      scale: 0
+      envelope:
+        attack: 0
+        hold: 0
+        recovery: 0
+    tilt:
+      enabled: 0
+      angle: 0
+      envelope:
+        attack: 0
+        hold: 0
+        recovery: 0
+    lockTarget:
+      enabled: 0
+      targetOffset: {x: 0, y: 0, z: 0}
+      blendSpeed: 0
+      envelope:
+        attack: 0
+        hold: 0
+        recovery: 0
+    postProcess:
+      enabled: 0
+      focusDistance: 0
+      aperture: 0
+      motionBlurIntensity: 0
+      envelope:
+        attack: 0
+        hold: 0
+        recovery: 0
+    zoom:
+      enabled: 0
+      distanceMultiplier: 0
+      fovOffset: 0
+      envelope:
+        attack: 0
+        hold: 0
+        recovery: 0
+  hit:
+    impulse:
+      enabled: 1
+      positionAmplitude: {x: 0.07, y: 0.055, z: 0.04}
+      rotationAmplitude: {x: 2.2, y: 1.4, z: 0.8}
+      frequency: 24
+      duration: 0.26
+      strength: 1.2
+    fov:
+      enabled: 1
+      offset: -4
+      envelope:
+        attack: 0.03
+        hold: 0.06
+        recovery: 0.24
+    recoil:
+      enabled: 0
+      pitch: 0
+      yawRange: {x: 0, y: 0}
+      envelope:
+        attack: 0
+        hold: 0
+        recovery: 0
+    offset:
+      enabled: 1
+      localOffset: {x: 0, y: 0, z: 0.12}
+      envelope:
+        attack: 0.03
+        hold: 0.06
+        recovery: 0.24
+    damping:
+      enabled: 0
+      multiplier: 0
+      envelope:
+        attack: 0
+        hold: 0
+        recovery: 0
+    timeScale:
+      enabled: 1
+      scale: 0.35
+      envelope:
+        attack: 0
+        hold: 0.08
+        recovery: 0.18
+    tilt:
+      enabled: 0
+      angle: 0
+      envelope:
+        attack: 0
+        hold: 0
+        recovery: 0
+    lockTarget:
+      enabled: 0
+      targetOffset: {x: 0, y: 0, z: 0}
+      blendSpeed: 0
+      envelope:
+        attack: 0
+        hold: 0
+        recovery: 0
+    postProcess:
+      enabled: 1
+      focusDistance: 4
+      aperture: 7
+      motionBlurIntensity: 0.48
+      envelope:
+        attack: 0.03
+        hold: 0.06
+        recovery: 0.24
+    zoom:
+      enabled: 0
+      distanceMultiplier: 0
+      fovOffset: 0
+      envelope:
+        attack: 0
+        hold: 0
+        recovery: 0
+  critical:
+    impulse:
+      enabled: 1
+      positionAmplitude: {x: 0.1, y: 0.08, z: 0.06}
+      rotationAmplitude: {x: 3.1, y: 2, z: 1.2}
+      frequency: 20
+      duration: 0.32
+      strength: 1.8
+    fov:
+      enabled: 1
+      offset: -6
+      envelope:
+        attack: 0.03
+        hold: 0.06
+        recovery: 0.24
+    recoil:
+      enabled: 0
+      pitch: 0
+      yawRange: {x: 0, y: 0}
+      envelope:
+        attack: 0
+        hold: 0
+        recovery: 0
+    offset:
+      enabled: 0
+      localOffset: {x: 0, y: 0, z: 0}
+      envelope:
+        attack: 0
+        hold: 0
+        recovery: 0
+    damping:
+      enabled: 0
+      multiplier: 0
+      envelope:
+        attack: 0
+        hold: 0
+        recovery: 0
+    timeScale:
+      enabled: 1
+      scale: 0.2
+      envelope:
+        attack: 0
+        hold: 0.1
+        recovery: 0.22
+    tilt:
+      enabled: 1
+      angle: 2.5
+      envelope:
+        attack: 0.03
+        hold: 0.06
+        recovery: 0.24
+    lockTarget:
+      enabled: 0
+      targetOffset: {x: 0, y: 0, z: 0}
+      blendSpeed: 0
+      envelope:
+        attack: 0
+        hold: 0
+        recovery: 0
+    postProcess:
+      enabled: 1
+      focusDistance: 3.5
+      aperture: 5.6
+      motionBlurIntensity: 0.6
+      envelope:
+        attack: 0.03
+        hold: 0.06
+        recovery: 0.24
+    zoom:
+      enabled: 0
+      distanceMultiplier: 0
+      fovOffset: 0
+      envelope:
+        attack: 0
+        hold: 0
+        recovery: 0
+  dash:
+    impulse:
+      enabled: 0
+      positionAmplitude: {x: 0, y: 0, z: 0}
+      rotationAmplitude: {x: 0, y: 0, z: 0}
+      frequency: 0
+      duration: 0
+      strength: 0
+    fov:
+      enabled: 1
+      offset: 6
+      envelope:
+        attack: 0.12
+        hold: 0.25
+        recovery: 0.3
+    recoil:
+      enabled: 0
+      pitch: 0
+      yawRange: {x: 0, y: 0}
+      envelope:
+        attack: 0
+        hold: 0
+        recovery: 0
+    offset:
+      enabled: 1
+      localOffset: {x: 0, y: 0, z: -0.14}
+      envelope:
+        attack: 0.12
+        hold: 0.25
+        recovery: 0.3
+    damping:
+      enabled: 1
+      multiplier: 0.72
+      envelope:
+        attack: 0.12
+        hold: 0.25
+        recovery: 0.3
+    timeScale:
+      enabled: 0
+      scale: 0
+      envelope:
+        attack: 0
+        hold: 0
+        recovery: 0
+    tilt:
+      enabled: 1
+      angle: 3.5
+      envelope:
+        attack: 0.12
+        hold: 0.25
+        recovery: 0.3
+    lockTarget:
+      enabled: 0
+      targetOffset: {x: 0, y: 0, z: 0}
+      blendSpeed: 0
+      envelope:
+        attack: 0
+        hold: 0
+        recovery: 0
+    postProcess:
+      enabled: 1
+      focusDistance: 8
+      aperture: 10
+      motionBlurIntensity: 0.34
+      envelope:
+        attack: 0.12
+        hold: 0.25
+        recovery: 0.3
+    zoom:
+      enabled: 1
+      distanceMultiplier: 1.14
+      fovOffset: 2
+      envelope:
+        attack: 0.12
+        hold: 0.25
+        recovery: 0.3

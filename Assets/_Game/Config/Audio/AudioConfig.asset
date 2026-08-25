@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28d0e46bae184ea3a619681e8a632c3f, type: 3}
+  m_Name: AudioConfig
+  m_EditorClassIdentifier: Assembly-CSharp::TPS.Audio.Infrastructure.AudioConfig
+  menuBGM:
+    clip: {fileID: 8300000, guid: 731ad7e38fedba046ad6ee01150844f4, type: 3}
+    volume: 0.8
+  gamingBGM:
+    clip: {fileID: 8300000, guid: ab41f1be8a63b9346927bd17c23c4561, type: 3}
+    volume: 0.4
+  bulletTimeBGM:
+    clip: {fileID: 8300000, guid: cc382f49acc71f24bb1d7668a02cba94, type: 3}
+    volume: 0.8
+  bulletTimeExit:
+    clip: {fileID: 0}
+    volume: 1
+  bulletTimeLowEnergy:
+    clip: {fileID: 8300000, guid: aae15b0cc9db26a4fbe3c70ebcb6663d, type: 3}
+    volume: 0.4
+  bulletTimeActivationRejected:
+    clip: {fileID: 0}
+    volume: 1
+  dodgeSound:
+    clip: {fileID: 0}
+    volume: 1
+  weaponShotSound:
+    clip: {fileID: 8300000, guid: c08ede07ba0cd1d45adb97ea4242009a, type: 3}
+    volume: 1
+  enemyBrokenSound:
+    clip: {fileID: 8300000, guid: 6be75ac7a5fd55846b4433346d219b83, type: 3}
+    volume: 1
+  enemyDownSound:
+    clip: {fileID: 8300000, guid: 970950ef6839c92459ce0ccd4cbd5afd, type: 3}
+    volume: 1
+  uiClickSound:
+    clip: {fileID: 0}
+    volume: 1
+  audioMixer: {fileID: 0}
+  pitchParameter: Pitch
+  bulletTimePitch: 0.45
